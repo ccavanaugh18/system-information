@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/cpu.png">
+    <title>System Information</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-2">System Information</h1>
+
+        <div id="about" class="about-container">
+            <p class="text-align-left">
+                Use this tool to obtain general information about your system. 
+                If you do not see any values being returned, use the refresh button to scan your system again.
+            </p>
+            <div class="about-content">
+                <div class="info-card">
+                    <img src="assets/gear.png" alt="General Info" />
+                    <h3>General Info</h3>
+                    <p>Basic information about your Operating System.</p>
+                </div>
+                <div class="info-card">
+                    <img src="assets/cpu.png" alt="CPU Info" />
+                    <h3>CPU</h3>
+                    <p>Learn more about your processor including cores, speed, and architecture.</p>
+                </div>
+                <div class="info-card">
+                    <img src="assets/ram.png" alt="Memory Info" />
+                    <h3>Memory</h3>
+                    <p>View details about your memory configuration.</p>
+                </div>
+            </div>
+            <button id="start-scan">Scan Your System</button>
+        </div>
+
+        <nav id="nav" class="hidden">
+            <button data-section="general" class="active">General Info</button>
+            <button data-section="cpu">CPU</button>
+            <button data-section="memory">Memory</button>
+        </nav>
+
+        <p id="loading" class="hidden">Loading System Information...</p>
+        
+        <section id="info-sections" class="hidden">
+            <div id="general-section" class="info-section">
+                <h2>General Info <button class="refresh-button" data-section="general">Refresh <span class="fa-solid fa-arrows-rotate"></span></button></h2>
+                <ul id="general-info"></ul>
+            </div>
+
+            <div id="cpu-section" class="info-section hidden">
+                <h2>CPU <button class="refresh-button" data-section="cpu">Refresh <span class="fa-solid fa-arrows-rotate"></span></button></h2>
+                <ul id="cpu-info"></ul>
+            </div>
+
+            <div id="memory-section" class="info-section hidden">
+                <h2>Memory <button class="refresh-button" data-section="memory">Refresh <span class="fa-solid fa-arrows-rotate"></span></button></h2>
+                <ul id="memory-info"></ul>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
