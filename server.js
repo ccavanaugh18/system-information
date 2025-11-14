@@ -11,7 +11,7 @@ app.get("/api/systeminfo", async (req, res) => {
     try {
         const data = await si.get({
             cpu: "manufacturer, brand, speed, cores, physicalCores, efficiencyCores",
-            osInfo: "platform, release",
+            osInfo: "platform, release, arch",
             system: "model, manufacturer",
             mem: "*",
             memLayout: "*"
