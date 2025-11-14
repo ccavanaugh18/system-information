@@ -78,6 +78,7 @@ function refreshSection(section, data) {
     } else if (section === "cpu") {
         populateList("cpu-info", {
             Manufacturer: data.cpu.manufacturer,
+            "Architecture": data.osInfo.arch,
             Model: data.cpu.brand,
             Speed: data.cpu.speed + "GHz",
             "Logical Cores(threads)": data.cpu.cores,
