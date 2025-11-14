@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: system-ui, sans-serif;
@@ -18,6 +19,10 @@ h1 {
 
 .mb-2 {
     margin-bottom: 2rem;
+}
+
+.blue {
+    color: #007BFF;
 }
 
 .container {
@@ -158,4 +163,15 @@ li {
 
 li:last-child {
     border-bottom: none;
+}
+
+.footer {
+    text-align: center;
+    background-color: #D3D3D3;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 1.1rem;
 }
